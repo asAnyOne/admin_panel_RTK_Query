@@ -1,3 +1,5 @@
+import Img from "./unknown_hero.jpg";
+
 const HeroesListItem = ({ name, description, element, onDelete }) => {
   let elementClassName;
 
@@ -19,9 +21,11 @@ const HeroesListItem = ({ name, description, element, onDelete }) => {
   }
 
   return (
-    <li className={`card flex-row mb-4 shadow-lg text-white ${elementClassName}`}>
+    <li
+      className={`card flex-row mb-4 shadow-lg text-white ${elementClassName}`}
+    >
       <img
-        src="http://www.stpaulsteinbach.org/wp-content/uploads/2014/09/unknown-hero.jpg"
+        src={Img}
         className="img-fluid w-25 d-inline"
         alt="unknown hero"
         style={{ objectFit: "cover" }}
@@ -31,7 +35,12 @@ const HeroesListItem = ({ name, description, element, onDelete }) => {
         <p className="card-text">{description}</p>
       </div>
       <span className="position-absolute top-0 start-100 translate-middle badge border rounded-pill bg-light">
-        <button type="button" className="btn-close btn-close" aria-label="Close" onClick={onDelete}></button>
+        <button
+          type="button"
+          className="btn-close btn-close"
+          aria-label="Close"
+          onClick={onDelete}
+        ></button>
       </span>
     </li>
   );
