@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://reduxtoolkitrtk.herokuapp.com/api",
+    baseUrl: "https://reduxtoolkitrtk.herokuapp.com",
   }),
   tagTypes: ["heroes", "filters"],
   endpoints: (build) => ({
