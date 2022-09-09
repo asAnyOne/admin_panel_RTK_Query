@@ -4,8 +4,7 @@ export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
     baseUrl:
-      "https://githubherokutoolkitapp.herokuapp.com/api" ||
-      "http://localhost:3001",
+      "https://githubherokutoolkitapp.herokuapp.com" || "http://localhost:3001",
   }), //
   tagTypes: ["heroes", "filters"],
   endpoints: (build) => ({
